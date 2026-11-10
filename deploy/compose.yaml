@@ -1,0 +1,16 @@
+name: homeserver
+
+services:
+  gateway:
+    build:
+      context: ../backend/gateway
+    ports:
+      - "127.0.0.1:8080:8080"
+
+  go-service:
+    build:
+      context: ../backend/go-service
+
+  cpp-service:
+    build:
+      context: ../backend/cpp-service
